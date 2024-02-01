@@ -1,0 +1,6 @@
+id: `${Number(targetId.split(".")[0]) + 1}.${Number(
+              targetId.split(".").join("")
+            )}.${item.children.length + 1}`,
+            text: `${Number(targetId.split(".")[0]) + 1}.${Number(
+              targetId.split(".").join("")
+            )}.${item.children.length + 1}`,
