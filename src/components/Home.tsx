@@ -42,13 +42,13 @@ export default function Home() {
     showData(newArr[0])
   }
 
-  const setNewDeletedata = (id, parentId: string, item: any) => {
+  const setNewDeletedata = (id: string, parentId: string, item: any) => {
     if (item.id == parentId) {
       return {
         ...item,
         children: [
           ...item.children
-            .filter((i) => i.id != id)
+            .filter((i: any) => i.id != id)
             .map((child: any) => setNewDeletedata(id, parentId, child)),
         ],
       }
@@ -62,7 +62,7 @@ export default function Home() {
     }
   }
 
-  function handleDelete(id) {
+  function handleDelete(id: string) {
     const parentId = id.toString().split(".").slice(0, -1).join(".")
     const preArr = data
     const newArr = preArr.map((item) => {
